@@ -65,8 +65,8 @@ Global (3 params):
 **Mathematical Verification**
 ```python
 # Core relationship proven:
-Base Model (A) + LoRA Changes (B) = Merged Model (C)
-Task Vector (D) = Merged Model (C) - Base Model (A) = B
+Base Model (A) + LoRA Changes (B) = Finetuned Model (C)
+Task Vector (D) = Finetuned Model (C) - Base Model (A) = B
 
 # When precision is maintained (FP32): D = B exactly
 # When precision is lost (FP16): D = B + precision_artifacts
