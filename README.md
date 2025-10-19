@@ -60,6 +60,10 @@ Global (3 params):
 - FP32 Result: When using FP32 precision, Task Vector-only parameters disappear
 - Perfect Match: LoRA adapters and Task Vectors become mathematically identical
 
+![Cosine Similarity Analysis](cosine_similarity_analysis.png)
+
+*Cosine similarity analysis demonstrating perfect mathematical equivalence between LoRA and Task Vectors (≈ 1.0)*
+
 **Critical Finding**: The extra 363 parameters in Task Vectors are NOT real model changes but precision artifacts from FP16 model merging. Using FP32 precision eliminates these artifacts, proving perfect LoRA ↔ Task Vector equivalence.
 
 **Mathematical Verification**
@@ -71,6 +75,10 @@ Task Vector (D) = Finetuned Model (C) - Base Model (A) = B
 # When precision is maintained (FP32): D = B exactly
 # When precision is lost (FP16): D = B + precision_artifacts
 ```
+
+![Mathematical Relationship Diagram](lora_task_vector_mathematical_relationship.png)
+
+*Visual representation of the LoRA ↔ Task Vector mathematical relationship proving D = B*
 
 ## Quick Start
 

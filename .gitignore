@@ -18,6 +18,7 @@ simple_task_vector_analysis.py
 definitive_investigation.py
 analyze_task_vector_structure.py
 visualize_model_structure.py
+generate_mathematical_relationship_diagram.py
 
 # ===========================================
 # Analysis Output Directories
