@@ -53,13 +53,6 @@ Global (3 params):
 | Float16 | 483 | 120 real + 363 artifacts | Artifacts |
 | Float32 | 120 | 120 real only | Clean |
 
-**Visual Evidence: Parameter Distribution Analysis**
-
-The following visualization demonstrates the critical difference between FP16 and FP32 precision:
-
-![Parameter Norm Distribution](comparison_results/norm_distribution_comparison.png)
-
-*Example: Norm distribution comparison showing shared parameters (LoRA + Task Vector) vs Task Vector-only parameters*
 
 **Key Insights:**
 - Shared Parameters: 120 parameters where LoRA and Task Vector overlap perfectly
