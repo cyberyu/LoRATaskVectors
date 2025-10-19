@@ -173,7 +173,7 @@ VALIDATION SUCCESSFUL: LoRA and Task Vectors are mathematically equivalent!
 
 **Visual Validation:**
 
-![Norm Distribution Comparison](/mnt/teamssd/compressed_LLM_tbricks/lora_task_vector_comparison/norm_distribution_comparison.png)
+![Norm Distribution Comparison](norm_distribution_comparison.png)
 
 *Parameter norm distribution analysis showing the mathematical equivalence between LoRA adapters and Task Vectors*
 
