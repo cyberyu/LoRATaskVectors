@@ -83,40 +83,6 @@ Task Vector (D) = Merged Model (C) - Base Model (A) = B
 
 **Three Steps to Validate LoRA ↔ Task Vector Equivalence**
 
-### Step 1: Merge LoRA
-```bash
-python merge_lora.py \
-  --precision fp32 \
-  --output_dir merged_model_fp32
-```
-Goal: Create fine-tuned model  
-Key: Use FP32 for precision!
-
-### Step 2: Extract Vectors
-```bash
-python extract_task_vectors.py \
-  --finetuned_model merged_model_fp32/ \
-  --output_dir task_vectors_fp32/
-```
-Goal: Extract task vectors  
-Result: 120 non-zero parameters
-
-### Step 3: Compare & Validate
-```bash
-python compare_lora_task_vector.py \
-  --task_vector_path task_vectors_fp32/ \
-  --output_dir results/
-```
-Goal: Mathematical validation  
-Result: Perfect equivalence!
-
-**One-Command Solution**
-```bash
-python final_validation.py
-```
-*Runs the complete analysis pipeline automatically*
-
-## Step-by-Step Analysis Guide
 
 ### Step 1: Merge Base Model and LoRA Checkpoints
 
@@ -205,20 +171,11 @@ MATHEMATICAL EQUIVALENCE ANALYSIS:
 VALIDATION SUCCESSFUL: LoRA and Task Vectors are mathematically equivalent!
 ```
 
-### Step 4: Quick Validation Pipeline
+**Visual Validation:**
 
-For complete end-to-end validation:
+![Norm Distribution Comparison](/mnt/teamssd/compressed_LLM_tbricks/lora_task_vector_comparison/norm_distribution_comparison.png)
 
-```bash
-python final_validation.py
-```
-
-This script automatically:
-1. Extracts LoRA weights from adapter
-2. Loads task vectors from file  
-3. Performs mathematical comparison
-4. Generates visualizations and reports
-5. Validates the equivalence hypothesis
+*Parameter norm distribution analysis showing the mathematical equivalence between LoRA adapters and Task Vectors*
 
 ### Advanced: Deep Mathematical Analysis
 
