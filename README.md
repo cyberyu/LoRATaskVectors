@@ -13,7 +13,7 @@ This repository contains analysis proving the mathematical equivalence between L
 ## Key Findings
 
 **Mathematical Equivalence Proven**
-- Perfect correlation: Cosine similarity of 1.225392 (≈ 1.0)
+- Perfect correlation: Cosine similarity of 1.000013 (≈ 1.0)
 - Numerical precision: Maximum difference of 2.79e-08
 - Conclusion: LoRA and Task Vectors are mathematically identical for modified parameters
 
