@@ -1,0 +1,5 @@
+base_model: bigcode/starcoder2-3b
+finetuned_model: /mnt/teamssd/compressed_LLM_tbricks/starcoder2_3b_Triple_Merged
+output_dir: /mnt/teamssd/compressed_LLM_tbricks/task_vector_3b_triple
+device: cuda:0
+trust_remote_code: false
