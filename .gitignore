@@ -43,10 +43,6 @@ task_vectors_fp16/
 # Keep checkpoint-40000 as it's the example, but ignore other checkpoints
 checkpoint-*/
 !checkpoint-40000/
-*.safetensors
-*.bin
-*.pt
-*.pth
 models/
 merged_models/
 task_vectors/
